@@ -167,7 +167,7 @@ function App() {
 
           <div className="flex-center main-con">
             <div className="flex-about">
-              <div className="about" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+              <div className="about about-main" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                 <h2><IoIosGitBranch className='icon-branch' /> About Me</h2>
                 <div className="about-phrase">
                   {aboutPhrase.map(phrase => (

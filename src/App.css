@@ -769,6 +769,49 @@ footer{
   .exp{
     max-width: 100%;
   }
+
+  /* Scrollbar styling for about section */
+.about-main {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.about-main::-webkit-scrollbar {
+  width: 6px;
+}
+
+.about-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.about-main::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.dark-mode .about-main::-webkit-scrollbar-thumb {
+  background: #444444;
+}
+
+.light-mode .about-main::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+}
+
+.about-main::-webkit-scrollbar-thumb:hover {
+  background: #6693e0;
+}
+
+/* Firefox scrollbar */
+.about-main {
+  scrollbar-width: thin;
+}
+
+.dark-mode .about-main {
+  scrollbar-color: #444444 transparent;
+}
+
+.light-mode .about-main {
+  scrollbar-color: #d0d0d0 transparent;
+}
 }
 
 @media (max-width: 768px) {

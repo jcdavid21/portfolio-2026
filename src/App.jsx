@@ -116,6 +116,16 @@ function App() {
     }
   ]
 
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = Resume;
+    link.download = 'Juan_Carlo_David_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <div className={`flex-center ${darkMode ? 'light-mode' : 'dark-mode'} main-container`}>
@@ -128,7 +138,9 @@ function App() {
                 <div className="location"><SlLocationPin /> Caloocan City, Philippines</div>
                 <div className="position">Freelance Web Developer</div>
                 <div className="actions flex-center">
-                  <button className='btn-primary'><FaRegFileLines /> Download Resume</button>
+                  <button className='btn-primary' onClick={handleDownloadResume}>
+                    <FaRegFileLines /> Download Resume
+                  </button>
                   <a href="mailto:juancarlodavid14@gmail.com"><button className='btn-secondary'><MdOutlineEmail /> Send Email </button></a>
                 </div>
               </div>
@@ -139,9 +151,9 @@ function App() {
               <StyledWrapper>
                 <div className="toggle-switch">
                   <label className="switch-label">
-                    <input 
-                      type="checkbox" 
-                      className="checkbox" 
+                    <input
+                      type="checkbox"
+                      className="checkbox"
                       checked={darkMode}
                       onChange={() => setDarkMode(!darkMode)}
                     />
@@ -274,10 +286,10 @@ function App() {
           <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
             <h2 className="gallery-title">Gallery</h2>
             <div style={{ height: '600px', position: 'relative' }}>
-              <CircularGallery 
-                bend={0} 
-                textColor={darkMode ? "#424242" : "#fff"} 
-                borderRadius={0.05} 
+              <CircularGallery
+                bend={0}
+                textColor={darkMode ? "#424242" : "#fff"}
+                borderRadius={0.05}
                 scrollEase={0.02}
               />
             </div>

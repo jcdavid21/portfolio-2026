@@ -772,7 +772,7 @@ footer{
 
   /* Scrollbar styling for about section */
 .about-main {
-  max-height: 400px;
+  max-height: 350px;
   overflow-y: auto;
 }
 
